@@ -1,0 +1,5 @@
+docker pull jasonrivers/nagios:latest
+docker run --name nagios-demo -d -p 8082:80 jasonrivers/nagios:latest
+docker ps --filter name=nagios-demo
+
+docker network connect se-compose_library-net nagios
